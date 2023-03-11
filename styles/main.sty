@@ -1,20 +1,3 @@
-%
-% Copyright (c) 2022 Rene Hampölz
-%
-% Use of this source code is governed by an MIT-style
-% license that can be found in the LICENSE file under
-% https://github.com/hampoelz/LaTeX-Template.
-%
-
-% ========================================
-%              Do not change!             
-%                                         
-%     You can change configurations and   
-%      packages in the sections below     
-% ========================================
-
-\typeout{Rene Hampölz, 2022}
-
 \usepackage{luaotfload}                 % Font loader
 \usepackage{fontspec}                   % Font selection
 \usepackage[EU2]{fontenc}               % Font encoding
@@ -30,24 +13,6 @@
 % --------------- language ---------------
 \usepackage[english]{babel}             % english language
 % \usepackage[german]{babel}              % german language
-
-% ----- auto-generate commit history -----
-% title of the generated history timeline
-\protected\def\HistoryTimelineTitle{Commit History}
-
-% maximum commits to show in the history timeline
-\def\HistoryTimelineLimit{5}
-
-% title of the generated history table
-\protected\def\HistoryTableTitle{Full Commit History}
-
-% maximum commits to show in the history table use '0' for no limit
-\def\HistoryTableLimit{0}
-
-% commits ignored in generated history (seperate with space)
-% example config:
-%   \def\HistoryIgnoreCommits{32d0a55 b64004a d431f06}
-\def\HistoryIgnoreCommits{}
 
 % ------------ document fonts ------------
 % add custom fonts to the "fonts" folder and change the configurations below
@@ -75,9 +40,16 @@
 % ========================================
 
 % ------------ preconfigured -------------
-\usepackage{styles/history}             % auto-generate commit history - included packages: xparse, graphicx, calc, booktabs, ltablex, environ, ifplatform
 \usepackage{styles/commands}            % enable or disable predefined commands
-\usepackage{styles/htbla}               % htbla weiz styles - included packages: xcolor, hyperref, geometry, fancyhdr, calc
+% \usepackage{xcolor}
+% \definecolor{htbla}{HTML}{148873}
+
+\usepackage{hyperref}
+% \hypersetup{colorlinks=true, allcolors=htbla}
+
+\usepackage{geometry}
+\geometry{top=20mm,bottom=25mm}
+
 
 % --------- mathematical packages --------
 \usepackage{amsmath}                    % mathematical symbols
@@ -88,16 +60,6 @@
 \usepackage{tocvsec2}                   % table of contents control
 \usepackage{hyperref}                   % produce hypertext links
 \usepackage{csquotes}                   % advanced facilities for quotations
-
-    % ::::::: toc cheatsheet :::::::
-    % -1 = \part
-    %  0 = \chapter
-    %  1 = \section
-    %  2 = \subsection
-    %  3 = \subsubsection
-    %  4 = \paragraph
-    %  5 = \subparagraph
-    % ::::::::::::::::::::::::::::::
 
 % ----------- layout packages ------------
 \usepackage{geometry}                   % modify document dimensions
@@ -121,20 +83,7 @@
  backend=biber,                         % |
  style=iso-numeric,                     % | or iso-authoryear
 ]{biblatex}                             % |
- \addbibresource{references.bib}         % |
+\addbibresource{references.bib}         % |
 
 % -------- source code formatting --------
 % \PassOptionsToPackage{outputdir=\auxDir}{minted}\usepackage{minted}
-
-% ----------- markdown support -----------
-
-    % ::::::: configuration ::::::::
-    % \PassOptionsToPackage{smartEllipses}{markdown}                  % enable ellipses
-    % \PassOptionsToPackage{hashEnumerators}{markdown}                % enable additional list declarations
-    % \PassOptionsToPackage{pipeTables,tableCaptions}{markdown}       % enable tables
-    % \PassOptionsToPackage{fencedCode}{markdown}                     % enable inline code-blocks
-    % \PassOptionsToPackage{inlineFootnotes}{markdown}                % enable inline footnotes
-    % \PassOptionsToPackage{hybrid}{markdown}                         % enable LaTeX in markdown
-    %::::::::::::::::::::::::::::::
-
-% \usepackage{markdown}\def\markdownOptionOutputDir{\auxDir}          % markdown support

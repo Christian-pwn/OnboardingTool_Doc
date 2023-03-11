@@ -1,6 +1,4 @@
 {
-    "task.allowAutomaticTasks": "on",
-    "git.pullTags": false,
     "git.mergeEditor": true,
     "cSpell.language": "de,en",
     "latex-workshop.latex.outDir": "%DIR%/out",
@@ -10,7 +8,5 @@
             "tools": [ "lualatexmk" ]
         }
     ],
-    "latex-workshop.linting.lacheck.enabled": true,
-    "gitlens.showWelcomeOnInstall": false,
-    "gitlens.showWhatsNewAfterUpgrades": false
+    "latex-workshop.linting.lacheck.enabled": true
 }

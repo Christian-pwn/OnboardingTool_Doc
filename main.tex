@@ -1,33 +1,23 @@
-\documentclass[a4paper]{hitec}
-\settextfraction{0.95}      % reduce left margin
-
+\documentclass[11pt]{report}
 \usepackage{styles/main}
-\usepackage{styles/custom}
-
-\htltitle{}
-\confidential{\textbf{}}
-
-\author{}
-\company{}
-\date{}
 
 \begin{document}
-\maketitle
 
-% \IncludeHistoryTimeline
+\input{src/titlepage.tex}
+\include{src/declaration.tex}
+\include{src/abstract.tex}
 
-\clearpage
-
+\settocdepth{subsection}
 \tableofcontents
 
-\clearpage
+\include{src/introduction.tex}
+\include{src/project_management.tex}
+\include{src/webbased_applications.tex}
 \include{src/Backend.tex}
-\settocdepth{subsection}
+\include{src/frontend.tex}
 
-% \clearpage
-% 
-% \nocite{*}
-% \printbibliography
-% \listoffigures
-\IncludeHistoryTable
+\nocite{*}
+\printbibliography
+\listoffigures
+
 \end{document}

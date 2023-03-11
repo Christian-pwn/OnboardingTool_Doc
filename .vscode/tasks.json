@@ -20,70 +20,6 @@
                 "close": true,
             },
             "problemMatcher": []
-        },
-        {
-            "label": "Update Template",
-            "type": "shell",
-            "command": "./scripts/update.sh",
-            "args": [ "--${input:abort}" ],
-            "windows":{
-                "command": ".\\scripts\\update.bat",
-                "args": [ "/${input:abort}" ]
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated",
-                "clear": true
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Check Template Updates",
-            "type": "shell",
-            "command": "./scripts/update.sh",
-            "args": [
-                "--check"
-            ],
-            "windows": {
-                "command": ".\\scripts\\update.bat",
-                "args": [
-                    "/check"
-                ]
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated",
-                "clear": true
-            },
-            "runOptions": {
-                "runOn": "folderOpen",
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Install requirements",
-            "type": "shell",
-            "command": "echo Sorry your platform is not yet supported!",
-            "windows": {
-                "command": ".\\scripts\\install.bat",
-                "args": [ "/installonly" ]
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "presentation": {
-                "reveal": "always",
-                "focus": true,
-                "panel": "dedicated",
-                "clear": true
-            },
-            "problemMatcher": []
         }
     ],
     "inputs": [
@@ -93,6 +29,6 @@
             "description": "Select a task execution option:",
             "options":[ "run or continue", "abort" ],
             "default": "run or continue",
-        },
+        }
     ]
 }
