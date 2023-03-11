@@ -3,7 +3,7 @@
 \section{Database}
 \subsection{Relational Databases}
     Relational databases are a combination of two or more tables.
-    These kinds of databases are so important because they are fast and very reliable. 
+    These kinds of databases are important because they are fast and very reliable. 
     The reason they are called relational is because of their table structure, that means that each table consists of many different rows and columns.
     %To be seen as a valid table input each cell in a row has to be valid.
 \subsubsection{The ACID Theorem}
@@ -15,10 +15,14 @@ The Acronym ACID describes the basic guideline each database should follow. It s
     \item Durability: Durability means that transactions can not be reverted. After a transaction is done it will stay in database and can only be changed but can never be removed.
 \end{itemize}
 \subsubsection{The CAP Theorem}
-The Acronym CAP describes three main poles 
+The Acronym CAP describes three main points a database has to sustain in case of a network error. In this case only two of them will be achieved. 
 \begin{itemize}
-    \item Durability: Durability means that transactions can not be reverted. After a transaction is done it will stay in database and can only be changed but can never be removed.
+    \item Consistency: Consistency means that every query will give the same output or an error. This consistency has nothing to do with the Consistency of ACID.
+    \item Availability: Availability means that every read item contains data, but it may not be the most recent data.
+    \item Partition tolerance: Partition tolerance means that even if a single system-node stops working, the system as whole does still work.
 \end{itemize}
+    The most important of the three is arguably the partition tolerance, because it saves networks from malfunctioning. The other two are each equally useful, but have different usecases.
+     If you need a have a high consistency, your quality will suffer and vice versa. It is up to the user to decide which one is more important. 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\linewidth]{images/CAP_Theorem.png}
